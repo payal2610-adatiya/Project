@@ -1,5 +1,6 @@
 <?php
 include('connect.php');
+header('Content-Type: application/json');
 
 // Fetch all transactions
 $res = mysqli_query($con,"

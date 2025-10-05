@@ -1,5 +1,6 @@
 <?php
 include('connect.php');
+header('Content-Type: application/json');
 
 $user_id = $_REQUEST['user_id'] ?? '';
 $month = $_REQUEST['month'] ?? date('Y-m');

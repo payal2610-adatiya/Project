@@ -1,5 +1,7 @@
 <?php
 include('connect.php');
+header('Content-Type: application/json');
+
 
 $user_id = $_REQUEST['user_id'] ?? '';
 $name = $_REQUEST['name'] ?? '';

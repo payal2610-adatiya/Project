@@ -1,5 +1,6 @@
 <?php
 include('connect.php');
+header('Content-Type: application/json');
 
 $transaction_id = $_REQUEST['transaction_id'] ?? '';
 

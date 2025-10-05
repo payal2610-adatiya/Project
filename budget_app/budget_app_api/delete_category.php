@@ -1,5 +1,6 @@
-\<?php
+<?php
 include('connect.php');
+header('Content-Type: application/json');
 
 $category_id = $_GET['id'] ?? ''; // Get ID from URL
 

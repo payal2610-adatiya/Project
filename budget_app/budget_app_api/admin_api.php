@@ -1,5 +1,6 @@
 <?php
 include('connect.php');
+header('Content-Type: application/json');
 
 // Total users
 $user_count_res = mysqli_query($con, "SELECT COUNT(*) AS total_users FROM p_users");

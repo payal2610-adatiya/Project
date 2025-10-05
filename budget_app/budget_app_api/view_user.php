@@ -1,5 +1,6 @@
 <?php
 include('connect.php');
+header('Content-Type: application/json');
 
 // Fetch all users
 $res = mysqli_query($con, "SELECT id, name, email, created_at FROM p_users");
