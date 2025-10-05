@@ -1,16 +1,23 @@
 echo "<h2>Payal API</h2>";
 echo "<ul>";
+
 echo "<li><a href='payal/connect.php'>connection</a></li>";
-echo "<li><a href='payal/add_user.php'>add_user</a></li>";
+echo "<li><a href='payal/add_user.php'>add_User</a></li>";
+echo "<li><a href='payal/login_user.php'>login_user</a></li>";
 echo "<li><a href='payal/add_category.php'>add_category</a></li>";
 echo "<li><a href='payal/add_transactions.php'>add_transaction</a></li>";
+echo "<li><a href='payal/update.php'>update(User/Category/Transaction)</a></li>";
+echo "<li><a href='payal/delete_user.php'>delete_user</a></li>";
+echo "<li><a href='payal/delete_category.php'>delete_category</a></li>";
+echo "<li><a href='payal/delete_transaction.php'>delete_transaction</a></li>";
+
 echo "<li><a href='payal/view_user.php'>view_users</a></li>";
 echo "<li><a href='payal/view_category.php'>view_categories</a></li>";
 echo "<li><a href='payal/view_transaction.php'>view_transactions</a></li>";
 echo "<li><a href='payal/view.php'>view_all</a></li>";
-echo "<li><a href='payal/delete_user.php'>delete_user</a></li>";
-echo "<li><a href='payal/delete_category.php'>delete_category</a></li>";
-echo "<li><a href='payal/delete_transaction.php'>delete_transaction</a></li>";
-echo "<li><a href='payal/admin_api.php'>admin_dashboard_API</a></li>";
-echo "</ul>";
 
+echo "<li><a href='payal/overview.php'>overview</a></li>";
+echo "<li><a href='payal/reports.php'>reports</a></li>";
+echo "<li><a href='payal/admin_api.php'>admin_dashboard_API</a></li>";
+
+echo "</ul>";
