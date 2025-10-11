@@ -97,7 +97,6 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 children: [
                   // 🔹 App Logo / Title
-                  const Icon(Icons.location_city, size: 100, color: Colors.blueAccent),
                   const SizedBox(height: 16),
                   const Text(
                     "Welcome to BudgetBuddy",
