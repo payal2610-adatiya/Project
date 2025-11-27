@@ -1,0 +1,43 @@
+import 'package:flutter/material.dart';
+import '../models/project_model.dart';
+
+class ProjectProvider with ChangeNotifier {
+  List<ProjectModel> _projects = [];
+  List<ProjectModel> get projects => _projects;
+
+  Future<bool> updateStatusWithFlow({
+    required String projectId,
+    required String currentRole,
+    required String newStatus,
+    required int currentUserId,
+    String? reason,
+  }) async {
+    try {
+      ProjectModel project = _projects.firstWhere((p) => p.id == projectId);
+
+      if (newStatus == "On Hold" && (reason == null || reason.trim().isEmpty)) {
+        return false;
+      }
+
+      String nextRole = project.assignedTo;
+      if (newStatus == "Complete") {
+        if (currentRole == "designer") nextRole = "developer";
+        else if (currentRole == "developer") nextRole = "backend";
+        else if (currentRole == "backend") nextRole = "tester";
+        else if (currentRole == "tester") nextRole = "admin";
+        else if (currentRole == "admin") nextRole = "completed";
+      }
+
+      project.status = newStatus;
+      project.reasonForHold = newStatus == "On Hold" ? reason : null;
+      project.assignedTo = nextRole;
+      project.updatedBy = currentUserId;
+      project.updatedAt = DateTime.now().toString();
+
+      notifyListeners();
+      return true;
+    } catch (_) {
+      return false;
+    }
+  }
+}
